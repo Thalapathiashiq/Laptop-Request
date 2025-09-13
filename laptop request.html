@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Laptop Request Catalog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .catalog {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .laptop {
+            border: 1px solid #ccc;
+            padding: 15px;
+            width: 250px;
+            border-radius: 5px;
+        }
+        .laptop img {
+            width: 100%;
+            height: auto;
+        }
+        form {
+            margin-top: 40px;
+            max-width: 400px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 8px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px solid #aaa;
+        }
+        button {
+            background-color: #2ecc71;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Laptop Request Catalog</h1>
+
+    <div class="catalog">
+        <div class="laptop">
+            <img src="https://via.placeholder.com/250x150" alt="Laptop 1">
+            <h3>Dell XPS 13</h3>
+            <p>Intel i7, 16GB RAM, 512GB SSD</p>
+        </div>
+        <div class="laptop">
+            <img src="https://via.placeholder.com/250x150" alt="Laptop 2">
+            <h3>HP Spectre x360</h3>
+            <p>Intel i5, 8GB RAM, 256GB SSD</p>
+        </div>
+        <div class="laptop">
+            <img src="https://via.placeholder.com/250x150" alt="Laptop 3">
+            <h3>MacBook Air M2</h3>
+            <p>Apple M2, 8GB RAM, 512GB SSD</p>
+        </div>
+    </div>
+
+    <h2>Request a Laptop</h2>
+    <form action="submit_request.html" method="POST">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="laptop">Select Laptop:</label>
+        <select id="laptop" name="laptop" required>
+            <option value="">--Choose a Laptop--</option>
+            <option value="Dell XPS 13">Dell XPS 13</option>
+            <option value="HP Spectre x360">HP Spectre x360</option>
+            <option value="MacBook Air M2">MacBook Air M2</option>
+        </select>
+
+        <label for="reason">Reason for Request:</label>
+        <textarea id="reason" name="reason" rows="4" placeholder="Explain why you need this laptop..." required></textarea>
+
+        <button type="submit">Submit Request</button>
+    </form>
+
+</body>
+</html>
